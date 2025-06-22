@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FloraModern - Online Flower Boutique</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'playfair': ['"Playfair Display"', 'serif'],
+            'roboto': ['Roboto', 'sans-serif'],
+          },
+          colors: {
+            'brand-primary': '#86A873', // Soft green
+            'brand-secondary': '#F6E8EA', // Pale pink
+            'brand-accent': '#D4AF37',    // Gold
+            'brand-text': '#333333',
+            'brand-text-light': '#555555',
+          },
+          animation: {
+            'slide-in-up': 'slideInUp 0.5s ease-out',
+            'slide-out-down': 'slideOutDown 0.5s ease-in',
+            'fade-in': 'fadeIn 0.3s ease-out',
+            'fade-out': 'fadeOut 0.3s ease-in',
+          },
+          keyframes: {
+            slideInUp: {
+              '0%': { transform: 'translateY(100%)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            slideOutDown: {
+              '0%': { transform: 'translateY(0)', opacity: '1' },
+              '100%': { transform: 'translateY(100%)', opacity: '0' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            fadeOut: {
+              '0%': { opacity: '1' },
+              '100%': { opacity: '0' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+<style>
+  body {
+    overflow-x: hidden; /* Prevent horizontal scrollbars from modals/sliders */
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+</style>
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-yIWMZPZg.js"></script>
+</head>
+<body class="font-roboto">
+  <div id="root"></div>
+</body>
+</html>
